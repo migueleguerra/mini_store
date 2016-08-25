@@ -1,0 +1,31 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+h3{
+	text-decoration: underline;
+}
+
+img{
+	margin-top: 20px;
+}
+
+#img{
+	margin-right: 20px;
+	text-align: center;
+}
+
+p{
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+#img2{
+	margin-right: 60px;
+	text-align: center;
+}
+
+li{
+	margin-left: 30px;
+}

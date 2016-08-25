@@ -1,0 +1,32 @@
+<div ng-controller="homeController">
+	<div class="row">
+		<div class="col-lg-3">
+			<form>
+			    <div class="form-group">
+			      	<input type="text" class="form-control" ng-model="filter_name" placeholder="search...">
+			    </div>
+			</form>
+		</div>
+		<div class="col-lg-9">
+			<div class="row">
+				<div class="col-lg-2" id="img2" ng-repeat="product in products | filter: filter_name">
+					<img ng-src="{{product.img}}" class="img-rounded" alt="Cinque Terre" width="190" height="140">
+					<p><b>{{ product.name }}</b></p>
+					<p><b>({{ product.qty }} left)</b></p>
+				</div>
+			</div>
+			<div class="row">
+				<br><h3>Recent Orders</h3><br>
+				<ul ng-repeat="order in orders | filter: filter_name">
+					<li><b>{{ order.name_customer }} purchased {{ order.qty }} {{ order.name_product }}</b></li>
+				</ul>
+			</div>
+			<div class="row">
+				<br><h3>New Customer</h3><br>
+				<ul ng-repeat="customer in customers | filter: filter_name">
+					<li><b>{{ customer.name }} joined the store.</b></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
